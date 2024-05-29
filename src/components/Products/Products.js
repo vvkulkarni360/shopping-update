@@ -16,7 +16,7 @@ function Products(props) {
   return (
     <div>
       {/* <h1 className="page-title">Products</h1> */}
-      <div className="container-fluid justify-content-center align-items-center">
+      <div className="container justify-content-center align-items-center">
         <div class="row">
           {products.map((product) => (
             <div className="col-6 col-md-4 col-lg-3 my-3 g-3">
@@ -53,30 +53,31 @@ function Products(props) {
                     </div>
                   </div>
 
-                  <div className="mt-4 mb-3 text-center">
-                    <a
+                  <div className="buttonLinks mt-4 mb-3 text-center justify-content-between">
+                    <Link
                       // onClick={() => addToFavCallprop(product.id)}
-                      className="mx-3"
+                      to="/"
+                      className="favHover"
                       id="favHover"
                     >
                       <i class="fa fa-heart"></i>
-                    </a>
+                    </Link>
 
                     <Link
                       to={`/products/${product.id}`}
-                      className="mx-2 mb-2"
+                      className="mx-3 mb-2 button rounded-pill"
                       id="button"
                     >
                       Buy Now
                     </Link>
 
-                    <a
+                    <Link
                       onClick={() => addToCartCallprop(product.id)}
-                      className="mx-3"
+                      className="iconHover"
                       id="iconHover"
                     >
                       <i className="fa fa-shopping-cart"></i>
-                    </a>
+                    </Link>
 
                     {/* <button onClick={setProductId(id)}>
                             {product.buyButton.text}

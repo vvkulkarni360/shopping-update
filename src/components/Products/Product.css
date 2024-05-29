@@ -1,0 +1,180 @@
+/* left container */
+
+.productSideContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.saveToFav,
+.productImgs {
+  flex: 1;
+  @media only screen and (max-width: 991px) {
+    flex: 0;
+    flex-direction: column;
+  }
+}
+
+#favHover2 i {
+  text-decoration: none;
+  transition: 0.3s ease;
+  transform: scale(1.5);
+  color: var(--orange-color);
+}
+
+#favHover2:hover i {
+  cursor: pointer;
+  color: var(--main-color);
+  transform: scale(1.2);
+}
+
+#favText {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--link-color);
+}
+
+/* right container */
+
+#border {
+  border-bottom: 1px solid var(--thin-color);
+}
+
+.productCardTitle {
+  color: var(--main-color);
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.productCardText {
+  color: var(--light-color);
+  font-size: 1rem;
+}
+
+.productCardPricings {
+  display: block;
+}
+
+.productCardOfferPrice {
+  display: inline-block;
+  color: var(--main-color);
+  font-size: 1.5rem;
+  font-family: Roboto, Arial, sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+.productCardOriginalPrice {
+  display: inline-block;
+  color: var(--red-color);
+  font-size: 1rem;
+  font-family: Roboto, Arial, sans-serif;
+  letter-spacing: 1.2px;
+  font-weight: 400;
+  text-decoration: line-through;
+  text-decoration-color: var(--red-color);
+}
+
+.productCardDiscount {
+  display: inline-block;
+  color: var(--text-color);
+  background: var(--price-color);
+  letter-spacing: -0.06px;
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.3333333333;
+  padding: 2.5px 5px;
+}
+
+.productCardPriceText {
+  display: block;
+}
+
+#emiPerMonth {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+#emiPerMonth,
+#saveUpTo {
+  display: inline-block;
+}
+
+#availableOffersTitle {
+  color: var(--price-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.availableOffersList {
+  list-style: circle var(--price-color); /* none if don't want list styling */
+}
+
+.productServices {
+  display: block;
+}
+
+#productServicesIconsHover {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.productServicesIcon > i {
+  display: inline-flex;
+  color: var(--main-color);
+  padding: 10px;
+  background: var(--icon-bg-color);
+  border: 1px solid var(--icon-bg-color);
+  border-radius: 50%;
+  font-size: 1.3rem;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.productServices:hover .productServicesIcon:hover > i:hover {
+  transform: scale(0.9);
+}
+
+.productServicesIconText {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--link-color);
+}
+
+#button3 {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  background: var(--link-color);
+  border: 1px solid var(--link-color);
+  /* border-radius: 6rem; */
+  font-size: 0.9rem;
+  color: var(--text-color);
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  transition: 0.5s ease-in-out;
+}
+
+#button3:hover {
+  border: 1px solid var(--link-color);
+  background: transparent;
+  color: var(--link-color);
+}
+
+#button2 {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  background: transparent;
+  border: 1px solid var(--main-color);
+  background: var(--main-color);
+  color: var(--text-color);
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  transition: 0.5s ease-in-out;
+}
+
+#button2:hover {
+  border: 1px solid var(--main-color);
+  background: transparent;
+  color: var(--main-color);
+}

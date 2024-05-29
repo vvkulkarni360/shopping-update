@@ -54,7 +54,7 @@ const Cart = ({ cartItems }) => {
                     <div className="mt-4 mb-3 text-center">
                       <Link
                         to="/products"
-                        className="mx-2 mb-2 w-75"
+                        className="mx-2 mb-2 w-75 rounded-pill"
                         id="button"
                       >
                         Buy Now

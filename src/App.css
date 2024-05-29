@@ -13,38 +13,49 @@
   --second-color: #323946;
   --text-color: #fff;
   --light-color: #4d4d4d;
-  --second-main-color: rgb(255, 136, 0);
+  --thin-color: #bebebe;
   --light-black: #222222;
   --black: #000000;
-  --price-color: #03753c;
-  --price-second-color: #e5f7ee;
+  --price-color: #03753cc7;
   --orange-color: rgb(255, 106, 0);
-}
-
-span {
-  color: var(--light-color) !important;
-  font-size: 1rem !important;
+  --red-color: #d90000;
+  --link-color: #007185;
+  --link-hover-color: rgb(225, 109, 0);
+  --icon-bg-color: #f9f9f9;
 }
 
 #button {
   display: inline-block;
-  padding: 0.6rem 2.5rem;
+  padding: 0.5rem 1rem;
   background: transparent;
   border: 1px solid var(--second-color);
-  border-radius: 6rem;
   font-size: 0.9rem;
   color: var(--second-color);
   letter-spacing: 0.1rem;
   font-weight: 500;
   transition: 0.5s ease;
 }
+
 #button:hover {
   background: var(--main-color);
   color: var(--text-color);
 }
 
-a {
-  text-decoration: none !important;
+a,
+a:link,
+a:visited,
+#aLink {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 400;
+  transition: 0.3s ease;
+}
+
+#aLink:hover {
+  color: var(--link-hover-color);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: var(--link-hover-color);
 }
 
 #iconHover i {
