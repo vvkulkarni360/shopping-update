@@ -68,9 +68,21 @@
   transform: scale(1.2);
 }
 
-#favHover,
-#iconHover {
+.favHover,
+.iconHover {
   @media screen and (max-width: 470px) {
     display: none;
+  }
+}
+
+#button {
+  @media screen and (max-width: 470px) {
+    padding: 0.5rem 1.5rem;
+  }
+  @media (min-width: 1200px) and (max-width: 1399px) {
+    padding: 0.5rem 1.5rem;
+  }
+  @media (min-width: 1400px) {
+    padding: 0.6rem 2.5rem;
   }
 }

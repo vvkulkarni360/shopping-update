@@ -23,6 +23,7 @@ const Product = () => {
     setProductDetails(clickProduct);
   }, [productId]);
   // console.log(productDetails)
+
   return (
     // <div>
     //     <h2>{fetchedDetails.name}</h2>
@@ -37,29 +38,47 @@ const Product = () => {
     <div className="container mt-5 mb-3 productbg row">
       <div className="col-12 col-lg-6">
         <div className="row">
-          <div className="col-12 col-lg-3">
-            <div>this is imgs selection div</div>
+          <div className="col-12 col-lg-2 my-2 order-2 order-lg-1">
+            <div className="productSideContainer d-flex justify-content-start justify-content-lg-center">
+              <div className="saveToFav text-center mt-3">
+                <a
+                  // onClick={() => addToFavCallprop(product.id)}
+                  href="/"
+                  className=""
+                  id="favHover2"
+                >
+                  <i className="fa-regular fa-bookmark"></i>
+                </a>
+                <div className="mt-2 mb-lg-3" id="favText">
+                  Add to
+                  <br />
+                  Favourites
+                </div>
+              </div>
+
+              <div className="productImgs">this is imgs selection div</div>
+            </div>
           </div>
-          <div className="col-12 col-lg-9">
-            <div className="productImgContainer mx-2">
+          <div className="col-12 col-lg-10 order-1 order-lg-2">
+            <div className="productImgContainer me-lg-2">
               <div className="productImg border-light">
                 <img
+                  id="mainImage"
                   src={productDetails.image}
                   className="img-fluid w-100 rounded"
                   alt={productDetails.name}
                 />
               </div>
-              <div className="productImgs"></div>
             </div>
           </div>
         </div>
       </div>
       <div className="col-12 col-lg-6">
-        <div className="productRightContainer mx-2 text-left align-items-center">
+        <div className="productRightContainer mx-lg-2 text-left align-items-center">
           <div className="productCardContent">
             <div className="productCardTextContent" id="border">
               <div className="productCardTitle mt-2">{productDetails.name}</div>
-              <div className="productCardText mt-2 mb-3">
+              <div className="productCardText mt-2 mb-2 mb-lg-3">
                 {productDetails.subtitle}
               </div>
             </div>
@@ -83,7 +102,11 @@ const Product = () => {
                 <span id="emiPerMonth" className="mx-1">
                   ₹{productDetails.emipermonth}
                 </span>
-                per month. <br />
+                per month.
+                <Link to="/" id="aLink" className="ms-1">
+                  EMI Options
+                </Link>
+                <br />
                 <Link to="/" id="aLink" className="me-1">
                   Use Digital Payment
                 </Link>
@@ -99,41 +122,113 @@ const Product = () => {
             </div>
             <div className="availableOffers mt-1">
               <div id="availableOffersTitle">Available Offers</div>
-              <ul className="availableOffersList mt-2">
+              <ul className="availableOffersList mt-2 mb-lg-4">
                 <li>
-                  {productDetails.availableoffer.offer1}
+                  {productDetails.availableoffer?.offer1}
                   <Link to="/" id="aLink" className="ms-2">
                     T&C
                   </Link>
                 </li>
                 <li>
-                  {productDetails.availableoffer.offer2}
+                  {productDetails.availableoffer?.offer2}
                   <Link to="/" id="aLink" className="ms-2">
                     T&C
                   </Link>
                 </li>
                 <li>
-                  {productDetails.availableoffer.offer3}
+                  {productDetails.availableoffer?.offer3}
                   <Link to="/" id="aLink" className="ms-2">
                     T&C
                   </Link>
                 </li>
                 <li>
-                  {productDetails.availableoffer.offer4}
+                  {productDetails.availableoffer?.offer4}
                   <Link to="/" id="aLink" className="ms-2">
                     T&C
                   </Link>
                 </li>
               </ul>
             </div>
-          </div>
-          <div className="productLinks">
-            <Link to="/" className="" id="aLink">
-              Card link
-            </Link>
-            <Link to="/" className="ms-2" id="aLink">
-              Another link
-            </Link>
+            <div className="productServices mt-3 mb-4">
+              <div
+                className="productServicesIcons text-center mx-3"
+                id="productServicesIconsHover"
+              >
+                <div className="productServicesIcon">
+                  <i className="fa-regular fa-calendar-check"></i>
+                </div>
+                <div className="productServicesIconText">
+                  7 Days
+                  <br />
+                  Replacement
+                </div>
+              </div>
+              <div
+                className="productServicesIcons text-center mx-3"
+                id="productServicesIconsHover"
+              >
+                <div className="productServicesIcon">
+                  <i className="fa-solid fa-truck"></i>
+                </div>
+                <div className="productServicesIconText">
+                  Free
+                  <br />
+                  Delivery
+                </div>
+              </div>
+              <div
+                className="productServicesIcons text-center mx-3"
+                id="productServicesIconsHover"
+              >
+                <div className="productServicesIcon">
+                  <i className="fa-solid fa-shield"></i>
+                </div>
+                <div className="productServicesIconText">
+                  1 Year
+                  <br />
+                  Warranty
+                </div>
+              </div>
+              <div
+                className="productServicesIcons text-center mx-3"
+                id="productServicesIconsHover"
+              >
+                <div className="productServicesIcon">
+                  <i className="fa-regular fa-money-bill-1"></i>
+                </div>
+                <div className="productServicesIconText">
+                  Pay on
+                  <br />
+                  Delivery
+                </div>
+              </div>
+            </div>
+            <div className="productLinks text-center mt-5">
+              <Link
+                to="/"
+                className="mx-3 mt-2 w-75 rounded-pill"
+                id="button3"
+                style={{
+                  padding: "1rem 1.5rem;",
+                  fontSize: "1rem;",
+                }}
+              >
+                Buy Now
+              </Link>
+
+              <Link
+                to="/"
+                // onClick={() => addToCartCallprop()}
+                className="mx-3 my-2 w-75 rounded-pill"
+                id="button2"
+                style={{
+                  padding: "1rem 1.5rem;",
+                  fontSize: "1rem;",
+                }}
+              >
+                Add to Cart
+              </Link>
+            </div>
           </div>
         </div>
       </div>

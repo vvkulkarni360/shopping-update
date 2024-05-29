@@ -53,30 +53,31 @@ function Products(props) {
                     </div>
                   </div>
 
-                  <div className="mt-4 mb-3 text-center justify-content-between">
-                    <a
+                  <div className="buttonLinks mt-4 mb-3 text-center justify-content-between">
+                    <Link
                       // onClick={() => addToFavCallprop(product.id)}
-                      className=""
+                      to="/"
+                      className="favHover"
                       id="favHover"
                     >
                       <i class="fa fa-heart"></i>
-                    </a>
+                    </Link>
 
                     <Link
                       to={`/products/${product.id}`}
-                      className="mx-3 mb-2"
+                      className="mx-3 mb-2 button rounded-pill"
                       id="button"
                     >
                       Buy Now
                     </Link>
 
-                    <a
+                    <Link
                       onClick={() => addToCartCallprop(product.id)}
-                      className=""
+                      className="iconHover"
                       id="iconHover"
                     >
                       <i className="fa fa-shopping-cart"></i>
-                    </a>
+                    </Link>
 
                     {/* <button onClick={setProductId(id)}>
                             {product.buyButton.text}
