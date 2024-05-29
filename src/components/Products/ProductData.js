@@ -7,6 +7,16 @@ export const productsData = [
     offerprice: "9,240",
     originalprice: "12,000",
     discount: "23",
+    emipermonth: "237",
+    saveupto: "15",
+    availableoffer: {
+      offer1:
+        "Get ₹50 instant discount on first Flipkart UPI txn on order of ₹200 and above",
+      offer2: "5% Cashback on Flipkart Axis Bank Card",
+      offer3:
+        "10% off up to ₹1,250 on HDFC Bank Credit Card EMI Txns, Tenure: 6 and 9 months, Min Txn Value: ₹7500",
+      offer4: "Get extra 36% off (price inclusive of cashback/coupon)",
+    },
     buyButton: {
       text: "Buy Now",
       onClick: () => {

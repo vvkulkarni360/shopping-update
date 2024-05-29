@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { productsData } from "./ProductData";
-import "./Products.css";
+import "./Product.css";
 
 const Product = () => {
   const { productId } = useParams();
@@ -34,29 +34,107 @@ const Product = () => {
     //     <p>Product {productId}</p>
     //     <p>Price {productDetails.price} </p>
     // </div>
-    <div className="container productbg row">
-      <div className="card">
-        <img
-          src={productDetails.image}
-          className="card-img-top"
-          alt={productDetails.name}
-        />
-        <div className="card-body">
-          <h5 className="card-title">{productDetails.name}</h5>
-          <p className="card-text">{productDetails.price}</p>
+    <div className="container mt-5 mb-3 productbg row">
+      <div className="col-12 col-lg-6">
+        <div className="row">
+          <div className="col-12 col-lg-3">
+            <div>this is imgs selection div</div>
+          </div>
+          <div className="col-12 col-lg-9">
+            <div className="productImgContainer mx-2">
+              <div className="productImg border-light">
+                <img
+                  src={productDetails.image}
+                  className="img-fluid w-100 rounded"
+                  alt={productDetails.name}
+                />
+              </div>
+              <div className="productImgs"></div>
+            </div>
+          </div>
         </div>
-        <ul className="list-group list-group-flush">
-          <li className="list-group-item">An item</li>
-          <li className="list-group-item">A second item</li>
-          <li className="list-group-item">A third item</li>
-        </ul>
-        <div className="card-body">
-          <Link to="/" className="card-link button">
-            Card link
-          </Link>
-          <Link to="/" className="card-link ">
-            Another link
-          </Link>
+      </div>
+      <div className="col-12 col-lg-6">
+        <div className="productRightContainer mx-2 text-left align-items-center">
+          <div className="productCardContent">
+            <div className="productCardTextContent" id="border">
+              <div className="productCardTitle mt-2">{productDetails.name}</div>
+              <div className="productCardText mt-2 mb-3">
+                {productDetails.subtitle}
+              </div>
+            </div>
+
+            <div className="productCardPriceDetails my-3" id="border">
+              <div className="productCardDiscount mt-1">
+                {productDetails.discount}% OFF
+              </div>
+              <div className="productCardPricings mt-1">
+                <div className="productCardOriginalPrice">
+                  ₹{productDetails.originalprice}
+                </div>
+                <div className="productCardOfferPrice mx-2">
+                  ₹{productDetails.offerprice}
+                </div>
+              </div>
+
+              <div className="productCardPriceText mb-3">
+                Inclusive of all taxes <br />
+                <b>EMI</b> starts at
+                <span id="emiPerMonth" className="mx-1">
+                  ₹{productDetails.emipermonth}
+                </span>
+                per month. <br />
+                <Link to="/" id="aLink" className="me-1">
+                  Use Digital Payment
+                </Link>
+                and
+                <b className="mx-1">
+                  save up to
+                  <span id="saveUpTo" className="ms-1">
+                    {productDetails.saveupto}%
+                  </span>
+                </b>
+                today.
+              </div>
+            </div>
+            <div className="availableOffers mt-1">
+              <div id="availableOffersTitle">Available Offers</div>
+              <ul className="availableOffersList mt-2">
+                <li>
+                  {productDetails.availableoffer.offer1}
+                  <Link to="/" id="aLink" className="ms-2">
+                    T&C
+                  </Link>
+                </li>
+                <li>
+                  {productDetails.availableoffer.offer2}
+                  <Link to="/" id="aLink" className="ms-2">
+                    T&C
+                  </Link>
+                </li>
+                <li>
+                  {productDetails.availableoffer.offer3}
+                  <Link to="/" id="aLink" className="ms-2">
+                    T&C
+                  </Link>
+                </li>
+                <li>
+                  {productDetails.availableoffer.offer4}
+                  <Link to="/" id="aLink" className="ms-2">
+                    T&C
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="productLinks">
+            <Link to="/" className="" id="aLink">
+              Card link
+            </Link>
+            <Link to="/" className="ms-2" id="aLink">
+              Another link
+            </Link>
+          </div>
         </div>
       </div>
     </div>
